@@ -1,4 +1,5 @@
 import requests
+import ipaddress
     
 #API to get the info of the computer's IP Address
 def get_info(ip_address):
@@ -13,10 +14,21 @@ def get_info(ip_address):
     }
     return location_data
 
+def validate_ip_address(address):
+    try:
+        ip = ipaddress.ip_address(address)
+        return True
+    except ValueError:
+        return False
+
 #Main functon
 while True:
     response = input("Enter IP Address: ")
+    validate = validate_ip_address(response)
     if response == "quit" or response == "q":
         break
-    info = get_info(response)
-    print(info)
+    if validate == True:
+        info = get_info(response)
+        print(info)
+    else:
+        print("invalid input")
