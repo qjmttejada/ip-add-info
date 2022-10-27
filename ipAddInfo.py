@@ -1,9 +1,9 @@
 import requests
 
-#API to get the computer's IP Address
+#get user input 
 def get_ip():
-    response = requests.get('https://api64.ipify.org?format=json').json()
-    return response["ip"]
+    response = input("Enter IP Address: ")
+    return response
 
 #API to get the info of the computer's IP Address
 def get_info():
@@ -18,6 +18,5 @@ def get_info():
         "isp": response.get("org")
     }
     return location_data
-
 
 print(get_info())
