@@ -9,10 +9,8 @@ def get_info(ip_address):
         "city": response.get("city"),
         "region": response.get("region"),
         "country": response.get("country_name"),
-        "country_code": response.get("country_code"),
         "postal_code": response.get("postal"),
-        "isp": response.get("org"),
-        "asn": response.get("asn")
+        "isp": response.get("org")
     }
     return location_data
 
