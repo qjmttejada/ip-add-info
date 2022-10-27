@@ -14,8 +14,10 @@ def get_info():
         "city": response.get("city"),
         "region": response.get("region"),
         "country": response.get("country_name"),
+        "country_code": response.get("country_code"),
         "postal_code": response.get("postal"),
-        "isp": response.get("org")
+        "isp": response.get("org"),
+        "asn": response.get("asn")
     }
     return location_data
 
