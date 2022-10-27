@@ -9,45 +9,76 @@
  
 <div class="container">
  
-    <br>
-    <br>
-    <h1>IP Address Information Finder</h1>
-    <h2>by Team 3 (Plus Ultra)</h2>
- 
-    <br>
-    <br>
+    <h1 class="mt-5 mb-2">IP Address Information Finder</h1>
+    <h3 class="mb-1">by Team 3 (Plus Ultra)</h3>
+    <p class="mb-5"> Members: Cahambing | Parman | Tejada</p>
  
     <form action="{{url_for('Index')}}" method="post">
  
-        <div class="form-group">
- 
+        <div class="form-group"> <!-- user input -->
             <input type="text" name = "search" class="form-control mb-2" placeholder="Enter IP Address">
         </div>
  
-        <input type="submit" class="btn btn-primary" value="Search">
+        <input type="submit" class="btn btn-primary mb-4" value="Search">
  
  
  
     </form>
- 
-    <br>
-    <br>
- 
-    <p>IP Address is : {{data.ip}}</p>
-    <p>City Location is : {{data.city}}</p>
-    <p>IP Country is : {{data.country}}</p>
-    <p>Available Language is : {{data.languages}}</p>
- 
-    <p>Latitude Information Is : {{data.latitude}}</p>
-    <p>Longitude Information Is : {{data.longitude}}</p>
-    <p>Time Zone Information Is : {{data.timezone}}</p>
-    <p>Availble Calling Code : {{data.country_calling_code}}</p>
-    <p>Available Currency Is : {{data.currency}}</p>
-    <p>Internet Network Is : {{data.org}}</p>
-    <p>Continent Code Is : {{data.continent_code}}</p>
-    <p>Postal Code Is : {{data.postal}}</p>
-    <p>UTC Offset Is : {{data.utc_offset}}</p>
- 
+    
+    <!-- Table for the Result -->
+    <table class="table table-striped table-hover">
+        <tbody>
+            <tr>
+                <td>IP Address</td>
+                <td>{{data.ip}}</td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>{{data.city}}</td>
+            </tr>
+            <tr>
+                <td>Region</td>
+                <td>{{data.region}}</td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td>{{data.country}} | {{data.country_name}}</td>
+            </tr>
+            <tr>
+                <td>Postal Code</td>
+                <td>{{data.postal}}</td>
+            </tr>
+            <tr>
+                <td>Latitute/Longitude</td>
+                <td>{{data.latitude}} / {{data.longitude}}</td>
+            </tr>
+            <tr>
+                <td>Time Zone</td>
+                <td>{{data.timezone}}</td>
+            </tr>
+            <tr>
+                <td>Calling Code</td>
+                <td>{{data.country_calling_code}}</td>
+            </tr>
+            <tr>
+                <td>Currency</td>
+                <td>{{data.currency}}</td>
+            </tr>
+            <tr>
+                <td>Language</td>
+                <td>{{data.languages}}</td>
+            </tr>
+            <tr>
+                <td>Continent Code</td>
+                <td>{{data.continent_code}}</td>
+            </tr>
+            <tr>
+                <td>ISP</td>
+                <td>{{data.org}}</td>
+            </tr>
+        </tbody>
+
+    </table>
 </div>
  
  
