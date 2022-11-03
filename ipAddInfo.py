@@ -1,7 +1,7 @@
 import ipapi
 from flask import Flask, request, render_template
  
-# enter "pip install ipapi" first in terminal
+# enter "pip install ipapi" first in terminal;
  
 app = Flask(__name__)
  
