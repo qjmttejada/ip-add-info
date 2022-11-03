@@ -1,0 +1,10 @@
+name: Build IP Add Info
+run-name: ${{ github.actor }} is building IP Add Info 🚀
+
+on: push
+
+jobs:
+  BuildIpAddInfo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: bash ipAddInfo.sh
