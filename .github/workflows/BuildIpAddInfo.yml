@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        run: bash ./ipAddInfo.sh
+        run: bash ${GITHUB_WORKSPACE}/ipAddInfo.sh
       
