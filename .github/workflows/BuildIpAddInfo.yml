@@ -4,15 +4,10 @@ run-name: ${{ github.actor }} is building IP Add Info 🚀
 on: push
 
 jobs:
-  BuildIpAddInfo:
+  runscript:
+    name: BuildIpAddInfo
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-        
-      - name: Run Super-Linter
-        uses: github/super-linter@v3
-        env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bash ./ipAddInfo.sh
       
