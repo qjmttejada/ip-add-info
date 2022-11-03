@@ -7,4 +7,4 @@ jobs:
   BuildIpAddInfo:
     runs-on: ubuntu-latest
     steps:
-      - run: bash ipAddInfo.sh
+      - run: bash ./ipAddInfo.sh
